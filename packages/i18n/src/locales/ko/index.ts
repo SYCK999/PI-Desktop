@@ -300,6 +300,8 @@ export const ko = {
     usageContextAriaRemaining: "남음",
     usageContextAriaUsed: "사용됨",
     usageTurnTotal: "이번 턴",
+    usageElapsed: "{{seconds}}s",
+    usageTotalTokens: "{{count}} tokens",
     usageThroughputLabel: "생성 속도",
     usageThroughput: "{{count}} tokens/s",
     usageThroughputEstimated: "≈ {{count}} tokens/s",

@@ -293,6 +293,8 @@ export const zhCN = {
     usageContextAriaRemaining: "剩余",
     usageContextAriaUsed: "已用",
     usageTurnTotal: "本轮合计",
+    usageElapsed: "耗时 {{seconds}}s",
+    usageTotalTokens: "{{count}} tokens",
     usageThroughputLabel: "生成速度",
     usageThroughput: "{{count}} tokens/s",
     usageThroughputEstimated: "约 {{count}} tokens/s",

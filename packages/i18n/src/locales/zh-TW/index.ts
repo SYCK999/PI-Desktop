@@ -293,6 +293,8 @@ export const zhTW = {
     usageContextAriaRemaining: "剩餘",
     usageContextAriaUsed: "已用",
     usageTurnTotal: "本輪合計",
+    usageElapsed: "耗時 {{seconds}}s",
+    usageTotalTokens: "{{count}} tokens",
     usageThroughputLabel: "生成速度",
     usageThroughput: "{{count}} tokens/s",
     usageThroughputEstimated: "約 {{count}} tokens/s",

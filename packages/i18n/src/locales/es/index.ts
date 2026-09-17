@@ -291,6 +291,8 @@ export const es = {
     "usageContextAriaRemaining": "restante",
     "usageContextAriaUsed": "usado",
     "usageTurnTotal": "Este turno",
+    "usageElapsed": "{{seconds}}s",
+    "usageTotalTokens": "{{count}} tokens",
     "usageThroughputLabel": "Velocidad de generación",
     "usageThroughput": "{{count}} tokens/s",
     "usageThroughputEstimated": "≈ {{count}} tokens/s",

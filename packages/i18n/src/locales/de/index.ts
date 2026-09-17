@@ -291,6 +291,8 @@ export const de = {
     "usageContextAriaRemaining": "verbleibend",
     "usageContextAriaUsed": "verwendet",
     "usageTurnTotal": "Diese Runde",
+    "usageElapsed": "{{seconds}}s",
+    "usageTotalTokens": "{{count}} Tokens",
     "usageThroughputLabel": "Generierungsgeschwindigkeit",
     "usageThroughput": "{{count}} Tokens/s",
     "usageThroughputEstimated": "≈ {{count}} Tokens/s",

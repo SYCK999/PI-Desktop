@@ -291,6 +291,8 @@ export const fr = {
     "usageContextAriaRemaining": "restant",
     "usageContextAriaUsed": "utilisé",
     "usageTurnTotal": "Ce tour",
+    "usageElapsed": "{{seconds}}s",
+    "usageTotalTokens": "{{count}} jetons",
     "usageThroughputLabel": "Vitesse de génération",
     "usageThroughput": "{{count}} jetons/s",
     "usageThroughputEstimated": "≈ {{count}} jetons/s",

@@ -105,8 +105,20 @@ export function MessageMeta({
     responseOutputTokens ?? usage?.outputTokens ?? 0,
     responseDurationMs,
   );
-  const showThroughput = !usage && throughput !== undefined;
-  if (!modelId && !showThroughput) {
+  const showDurationThroughput = !usage && throughput !== undefined;
+  const durationSeconds =
+    responseDurationMs !== undefined && Number.isFinite(responseDurationMs)
+      ? responseDurationMs / 1000
+      : undefined;
+  const showDuration = durationSeconds !== undefined && durationSeconds > 0;
+  const totalTokens =
+    usage && usage.totalTokens > 0
+      ? usage.totalTokens
+      : responseOutputTokens && responseOutputTokens > 0
+        ? responseOutputTokens
+        : undefined;
+  const hasMeta = modelId || showDuration || totalTokens !== undefined || showDurationThroughput;
+  if (!hasMeta) {
     return null;
   }
   return (
@@ -116,7 +128,17 @@ export function MessageMeta({
           {modelId}
         </span>
       ) : null}
-      {showThroughput ? (
+      {showDuration ? (
+        <span className="message-meta-chip duration">
+          {t("chat.usageElapsed", { seconds: durationSeconds.toFixed(1) })}
+        </span>
+      ) : null}
+      {totalTokens !== undefined ? (
+        <span className="message-meta-chip tokens">
+          {t("chat.usageTotalTokens", { count: totalTokens })}
+        </span>
+      ) : null}
+      {showDurationThroughput ? (
         <span className="message-meta-chip throughput">
           {t("chat.usageThroughputEstimated", {
             count: formatCompactTokenCount(throughput),
